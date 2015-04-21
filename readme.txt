@@ -60,18 +60,19 @@ Yes, this plugin is compatible with all latest version of WooCommerce themes.
 
 == Changelog ==
 
+= 1.0.1 =
+*   Compatible with WooCommerce 2.3.8
+
 = 1.0.0 =
 *   Initial release
 
-= 1.0.1 =
-*   Compatible with WooCommerce 2.3.8
 
 == Upgrade Notice ==
 
-= 1.0.0 =
-*   Initial release
-
 = 1.0.1 =
 *   Compatible with WooCommerce 2.3.8
+
+= 1.0.0 =
+*   Initial release
 
 
