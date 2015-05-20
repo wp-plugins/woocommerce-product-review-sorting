@@ -39,12 +39,12 @@ class WC_Product_Review_Sorting_Frontend {
 		if( $wc_product_review_sorting_settings ) {
 			if( array_key_exists( 'is_enable', $wc_product_review_sorting_settings ) && $wc_product_review_sorting_settings['is_enable'] == 'Enable' ) {
 				if( version_compare( get_option( 'woocommerce_db_version' ), '2.3.2', '>=' ) ) {
-					if ( get_post_type() == "product" && file_exists( $WC_Product_Review_Sorting->plugin_path . "/woocommerce-2.3/single-product-reviews.php" ) ) {
-						return $WC_Product_Review_Sorting->plugin_path . "/woocommerce-2.3/single-product-reviews.php";
+					if ( get_post_type() == "product" && file_exists( $WC_Product_Review_Sorting->plugin_path . "/templates/woocommerce-2.3/single-product-reviews.php" ) ) {
+						return $WC_Product_Review_Sorting->plugin_path . "/templates/woocommerce-2.3/single-product-reviews.php";
 					}
 				} else if( version_compare( get_option( 'woocommerce_db_version' ), '2.1', '>=' ) ) {
-					if ( get_post_type() == "product" && file_exists( $WC_Product_Review_Sorting->plugin_path . "/woocommerce/single-product-reviews.php" ) ) {
-						return $WC_Product_Review_Sorting->plugin_path . "/woocommerce/single-product-reviews.php";
+					if ( get_post_type() == "product" && file_exists( $WC_Product_Review_Sorting->plugin_path . "/templates/woocommerce/single-product-reviews.php" ) ) {
+						return $WC_Product_Review_Sorting->plugin_path . "/templates/woocommerce/single-product-reviews.php";
 					}
 				}
 			}

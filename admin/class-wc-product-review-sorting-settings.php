@@ -38,7 +38,7 @@ class WC_Product_Review_Sorting_Settings {
   function get_dc_settings_tabs() {
     global $WC_Product_Review_Sorting;
     $tabs = apply_filters('wc_product_review_sorting_tabs', array(
-      'wc_product_review_sorting_general' => __('Product Review Sorting', $WC_Product_Review_Sorting->text_domain)
+      'wc_product_review_sorting_general' => __('Product Review Sorting General', $WC_Product_Review_Sorting->text_domain)
     ));
     return $tabs;
   }
@@ -102,7 +102,7 @@ class WC_Product_Review_Sorting_Settings {
   /**
    * Register and add settings
    */
-  public function settings_page_init() {
+  public function settings_page_init() { 
     do_action('befor_settings_page_init');
     
     // Register each tab settings
@@ -169,8 +169,53 @@ class WC_Product_Review_Sorting_Settings {
   function get_field_callback_type($fieldType) {
     $callBack = '';
     switch($fieldType) {
+      case 'input':
+      case 'text':
+      case 'email':
+      case 'number':
+      case 'file':
+      case 'url':
+        $callBack = 'text_field_callback';
+        break;
+        
+      case 'hidden':
+        $callBack = 'hidden_field_callback';
+        break;
+        
+      case 'textarea':
+        $callBack = 'textarea_field_callback';
+        break;
+        
+      case 'wpeditor':
+        $callBack = 'wpeditor_field_callback';
+        break;
+        
       case 'checkbox':
         $callBack = 'checkbox_field_callback';
+        break;
+        
+      case 'radio':
+        $callBack = 'radio_field_callback';
+        break;
+        
+      case 'select':
+        $callBack = 'select_field_callback';
+        break;
+        
+      case 'upload':
+        $callBack = 'upload_field_callback';
+        break;
+        
+      case 'colorpicker':
+        $callBack = 'colorpicker_field_callback';
+        break;
+        
+      case 'datepicker':
+        $callBack = 'datepicker_field_callback';
+        break;
+        
+      case 'multiinput':
+        $callBack = 'multiinput_callback';
         break;
         
       default:
@@ -179,6 +224,50 @@ class WC_Product_Review_Sorting_Settings {
     }
     
     return $callBack;
+  }
+  
+  /** 
+   * Get the hidden field display
+   */
+  public function hidden_field_callback($field) {
+    global $WC_Product_Review_Sorting;
+    $field['value'] = isset( $field['value'] ) ? esc_attr( $field['value'] ) : '';
+    $field['value'] = isset( $this->options[$field['name']] ) ? esc_attr( $this->options[$field['name']] ) : $field['value'];
+    $field['name'] = "dc_{$field['tab']}_settings_name[{$field['name']}]";
+    $WC_Product_Review_Sorting->dc_wp_fields->hidden_input($field);
+  }
+  
+  /** 
+   * Get the text field display
+   */
+  public function text_field_callback($field) {
+    global $WC_Product_Review_Sorting;
+    $field['value'] = isset( $field['value'] ) ? esc_attr( $field['value'] ) : '';
+    $field['value'] = isset( $this->options[$field['name']] ) ? esc_attr( $this->options[$field['name']] ) : $field['value'];
+    $field['name'] = "dc_{$field['tab']}_settings_name[{$field['name']}]";
+    $WC_Product_Review_Sorting->dc_wp_fields->text_input($field);
+  }
+  
+  /** 
+   * Get the text area display
+   */
+  public function textarea_field_callback($field) {
+    global $WC_Product_Review_Sorting;
+    $field['value'] = isset( $field['value'] ) ? esc_textarea( $field['value'] ) : '';
+    $field['value'] = isset( $this->options[$field['name']] ) ? esc_textarea( $this->options[$field['name']] ) : $field['value'];
+    $field['name'] = "dc_{$field['tab']}_settings_name[{$field['name']}]";
+    $WC_Product_Review_Sorting->dc_wp_fields->textarea_input($field);
+  }
+  
+  /** 
+   * Get the wpeditor display
+   */
+  public function wpeditor_field_callback($field) {
+    global $WC_Product_Review_Sorting;
+    $field['value'] = isset( $field['value'] ) ? ( $field['value'] ) : '';
+    $field['value'] = isset( $this->options[$field['name']] ) ? ( $this->options[$field['name']] ) : $field['value'];
+    $field['name'] = "dc_{$field['tab']}_settings_name[{$field['name']}]";
+    $WC_Product_Review_Sorting->dc_wp_fields->wpeditor_input($field);
   }
   
   /** 
@@ -191,6 +280,72 @@ class WC_Product_Review_Sorting_Settings {
     $field['dfvalue'] = isset( $this->options[$field['name']] ) ? esc_attr( $this->options[$field['name']] ) : '';
     $field['name'] = "dc_{$field['tab']}_settings_name[{$field['name']}]";
     $WC_Product_Review_Sorting->dc_wp_fields->checkbox_input($field);
+  }
+  
+  /** 
+   * Get the checkbox field display
+   */
+  public function radio_field_callback($field) {
+    global $WC_Product_Review_Sorting;
+    $field['value'] = isset( $field['value'] ) ? esc_attr( $field['value'] ) : '';
+    $field['value'] = isset( $this->options[$field['name']] ) ? esc_attr( $this->options[$field['name']] ) : $field['value'];
+    $field['name'] = "dc_{$field['tab']}_settings_name[{$field['name']}]";
+    $WC_Product_Review_Sorting->dc_wp_fields->radio_input($field);
+  }
+  
+  /** 
+   * Get the select field display
+   */
+  public function select_field_callback($field) {
+    global $WC_Product_Review_Sorting;
+    $field['value'] = isset( $field['value'] ) ? esc_textarea( $field['value'] ) : '';
+    $field['value'] = isset( $this->options[$field['name']] ) ? esc_textarea( $this->options[$field['name']] ) : $field['value'];
+    $field['name'] = "dc_{$field['tab']}_settings_name[{$field['name']}]";
+    $WC_Product_Review_Sorting->dc_wp_fields->select_input($field);
+  }
+  
+  /** 
+   * Get the upload field display
+   */
+  public function upload_field_callback($field) {
+    global $WC_Product_Review_Sorting;
+    $field['value'] = isset( $field['value'] ) ? esc_attr( $field['value'] ) : '';
+    $field['value'] = isset( $this->options[$field['name']] ) ? esc_attr( $this->options[$field['name']] ) : $field['value'];
+    $field['name'] = "dc_{$field['tab']}_settings_name[{$field['name']}]";
+    $WC_Product_Review_Sorting->dc_wp_fields->upload_input($field);
+  }
+  
+  /** 
+   * Get the multiinput field display
+   */
+  public function multiinput_callback($field) {
+    global $WC_Product_Review_Sorting;
+    $field['value'] = isset( $field['value'] ) ? $field['value'] : array();
+    $field['value'] = isset( $this->options[$field['name']] ) ? $this->options[$field['name']] : $field['value'];
+    $field['name'] = "dc_{$field['tab']}_settings_name[{$field['name']}]";
+    $WC_Product_Review_Sorting->dc_wp_fields->multi_input($field);
+  }
+  
+  /** 
+   * Get the colorpicker field display
+   */
+  public function colorpicker_field_callback($field) {
+    global $WC_Product_Review_Sorting;
+    $field['value'] = isset( $field['value'] ) ? esc_attr( $field['value'] ) : '';
+    $field['value'] = isset( $this->options[$field['name']] ) ? esc_attr( $this->options[$field['name']] ) : $field['value'];
+    $field['name'] = "dc_{$field['tab']}_settings_name[{$field['name']}]";
+    $WC_Product_Review_Sorting->dc_wp_fields->colorpicker_input($field);
+  }
+  
+  /** 
+   * Get the datepicker field display
+   */
+  public function datepicker_field_callback($field) {
+    global $WC_Product_Review_Sorting;
+    $field['value'] = isset( $field['value'] ) ? esc_attr( $field['value'] ) : '';
+    $field['value'] = isset( $this->options[$field['name']] ) ? esc_attr( $this->options[$field['name']] ) : $field['value'];
+    $field['name'] = "dc_{$field['tab']}_settings_name[{$field['name']}]";
+    $WC_Product_Review_Sorting->dc_wp_fields->datepicker_input($field);
   }
   
 }

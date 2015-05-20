@@ -4,7 +4,7 @@ Donate link: http://www.dualcube.com
 Tags: wordpress, woocommerce, e-commerce, shop, review, rating, sorting reviews, sorting ratings, grouping reviews, grouping ratings
 Requires at least: 3.6
 Tested up to: 4.2.2
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -60,6 +60,9 @@ Yes, this plugin is compatible with all latest version of WooCommerce themes.
 
 == Changelog ==
 
+= 1.0.5 =
+*   Compatible with WooCommerce 2.3.9 and fixed some bugs
+
 = 1.0.4 =
 *   Compatible with WordPress version 4.2.2
 
@@ -77,6 +80,9 @@ Yes, this plugin is compatible with all latest version of WooCommerce themes.
 
 
 == Upgrade Notice ==
+
+= 1.0.5 =
+*   Compatible with WooCommerce 2.3.9 and fixed some bugs
 
 = 1.0.4 =
 *   Compatible with WordPress version 4.2.2

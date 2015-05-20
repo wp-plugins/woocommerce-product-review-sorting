@@ -5,8 +5,8 @@ jQuery(document).ready(function($) {
 		var post_title = $(this).parents().find('.current_product_title').val();
     var selected_value = $(this).val();
     
-    $(this).parents().find('ol.commentlist li').fadeOut(1000, function(){ $(this).remove(); });
-    $(this).parents().find('h2.no_of_review span').fadeOut(1000, function(){ $(this).remove(); });
+    $(this).parents().find('ol.commentlist li').fadeOut(300, function(){ $(this).remove(); });
+    $(this).parents().find('h2.no_of_review span').fadeOut(300, function(){ $(this).remove(); });
     
 		var sort_rating_data = {
 			action: 'sort_product_rating_ajax',
