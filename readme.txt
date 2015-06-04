@@ -12,8 +12,10 @@ All new WordPress WooCommerce plugin by which a customer can group all reviews b
 
 == Description ==
 WooCommerce Product Review Sorting plugin helps prospective buyers of a product to sort and go through its reviews as per the ratings as well as date which received from other customers.
+
 Suppose, a customer wants to buy a product from your Woostore and wants to check if anyone has given it a 1 star rating. If the buyer goes to its review section, the last review written will appear at the top, which may have other rating, may be customer want oldest reviews first. And this is where the Woocommere product review sorting plugin will help the buyer make things easier.
 The plugin places a dropdown menu on the review page to let the end-user select the reviews based on the ratings as well as date. If the user selects the “1 star” option from the drop-down list, all the reviews with 1 star ratings will be grouped and displayed. Similarly, the user can select “2, 3, 4 or 5 star” ratings separately to check out the corresponding feedback/reviews of these respective ratings. User may select "Newest" option from the dropdown to sort reviews according to date.
+
 Now, you can customize the label of those dropdown in your site. There is a all new settings panel is added where you can put your desired word to show for those labels of the dropdowns. Suppose, you want to change the word "5 stars" and make it "Excellent", you can easily change this from settings panel of this plugin.
 
 * For more details: [Click Here](http://plugins.dualcube.com/product/woocommerce-product-review-sorting/) *
