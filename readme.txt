@@ -18,7 +18,7 @@ The plugin places a dropdown menu on the review page to let the end-user select 
 
 Now, you can customize the label of those dropdown in your site. There is a all new settings panel is added where you can put your desired word to show for those labels of the dropdowns. Suppose, you want to change the word "5 stars" and make it "Excellent", you can easily change this from settings panel of this plugin.
 
-* For more details: [Click Here](http://plugins.dualcube.com/product/woocommerce-product-review-sorting/) *
+* For more details: [Click Here](http://plugins.dualcube.com/product/woocommerce-product-review-sorting/)
 
 = Features =
 *   WooCommerce Product Review Sorting Plugin groups product reviews based on ratings as well as date to allow future buyers learn about a specific product before purchasing it very easily.
