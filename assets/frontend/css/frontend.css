@@ -1,5 +1,5 @@
-select.rating_sorting {
-	min-width: 190px;
+select.rating_sorting, select.time_sorting {
+	min-width: 150px;
 	color: #252525;
 }
 
@@ -9,10 +9,14 @@ h2.no_of_review {
 	max-width: 55%;
 }
 
-div.rating_sort {
+div.review_sort {
 	float: right;
 }
 
 div.clear {
 	clear: both !important;
+}
+
+.time_sorting_container {
+  margin-top: 10px;
 }

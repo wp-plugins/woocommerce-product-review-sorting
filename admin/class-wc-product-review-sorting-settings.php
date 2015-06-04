@@ -23,14 +23,7 @@ class WC_Product_Review_Sorting_Settings {
   public function add_settings_page() {
     global $WC_Product_Review_Sorting;
     
-    add_menu_page(
-        __('Product Review Sorting Settings', $WC_Product_Review_Sorting->text_domain), 
-        __('Product Review Sorting Settings', $WC_Product_Review_Sorting->text_domain), 
-        'manage_options', 
-        'wc-product-review-sorting-setting-admin', 
-        array( $this, 'create_wc_product_review_sorting_settings' ),
-        $WC_Product_Review_Sorting->plugin_url . 'assets/images/dualcube.png'
-    );
+    add_submenu_page( 'woocommerce', __('WC Review Sort', $WC_Product_Review_Sorting->text_domain), __('WC Review Sort', $WC_Product_Review_Sorting->text_domain), 'manage_options', 'wc-product-review-sorting-setting-admin', array( $this, 'create_wc_product_review_sorting_settings' )  );
     
     $this->tabs = $this->get_dc_settings_tabs();
   }
@@ -38,7 +31,7 @@ class WC_Product_Review_Sorting_Settings {
   function get_dc_settings_tabs() {
     global $WC_Product_Review_Sorting;
     $tabs = apply_filters('wc_product_review_sorting_tabs', array(
-      'wc_product_review_sorting_general' => __('Product Review Sorting General', $WC_Product_Review_Sorting->text_domain)
+      'wc_product_review_sorting_general' => __('WC Review Sort General', $WC_Product_Review_Sorting->text_domain)
     ));
     return $tabs;
   }

@@ -29,4 +29,5 @@ if(!function_exists('woocommerce_version_compatibility')) {
 		<?php
   }
 }
+
 ?>

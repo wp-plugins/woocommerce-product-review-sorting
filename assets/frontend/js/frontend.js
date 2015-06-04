@@ -3,15 +3,17 @@ jQuery(document).ready(function($) {
 		$(this).find('option[id="default"]').hide();
 		var post_id = $(this).parents().find('.current_post_id').val();
 		var post_title = $(this).parents().find('.current_product_title').val();
-    var selected_value = $(this).val();
+		var selected_time = $('select.time_sorting').val();
+    var selected_rating = $(this).val();
     
     $(this).parents().find('ol.commentlist li').fadeOut(300, function(){ $(this).remove(); });
     $(this).parents().find('h2.no_of_review span').fadeOut(300, function(){ $(this).remove(); });
     
 		var sort_rating_data = {
-			action: 'sort_product_rating_ajax',
+			action: 'sort_review_rating_ajax',
 			product_id: post_id,
-			selected_option: selected_value
+			selected_rating: selected_rating,
+			selected_time: selected_time
 		};
 		$.post(woocommerce_params.ajax_url, sort_rating_data, function(response) {
 			var splitten_data = response.split('[${#(%18_concatenate-string%18)#}$]');
@@ -27,4 +29,27 @@ jQuery(document).ready(function($) {
 			}
 		});
 	});
+	
+	$('select.time_sorting').change(function() {
+		$(this).find('option[id="default"]').hide();
+		var selected_rating = $('select.rating_sorting').val();
+		var selected_time = $(this).val();
+		var post_id = $(this).parents().find('.current_post_id').val();
+		
+		$(this).parents().find('ol.commentlist li').fadeOut(300, function(){ $(this).remove(); });
+		
+		var sort_time_data = {
+			action: 'sort_review_time_ajax',
+			product_id: post_id,
+			selected_rating: selected_rating,
+			selected_time: selected_time
+		};
+		
+		$.post(woocommerce_params.ajax_url, sort_time_data, function(response) {
+			if( response ) {
+				$('ol.commentlist').html(response);
+			}
+		});
+	});
+	
 });

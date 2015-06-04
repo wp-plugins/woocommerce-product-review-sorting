@@ -38,7 +38,8 @@ class WC_Product_Review_Sorting_Admin {
 		$screen = get_current_screen();
 		
 		// Enqueue admin script and stylesheet from here
-		if (in_array( $screen->id, array( 'toplevel_page_wc-product-review-sorting-setting-admin' ))) :   
+		if (in_array( $screen->id, array( 'woocommerce_page_wc-product-review-sorting-setting-admin' ))) :
+			$WC_Product_Review_Sorting->library->load_qtip_lib();
 		  wp_enqueue_script('admin_js', $WC_Product_Review_Sorting->plugin_url.'assets/admin/js/admin.js', array('jquery'), $WC_Product_Review_Sorting->version, true);
 		  wp_enqueue_style('admin_css',  $WC_Product_Review_Sorting->plugin_url.'assets/admin/css/admin.css', array(), $WC_Product_Review_Sorting->version);
 	  endif;

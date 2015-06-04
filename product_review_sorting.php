@@ -4,7 +4,7 @@ Plugin Name: Woocommerce Product Review Sorting
 Plugin URI: http://dualcube.com
 Description: Woocommerce plugin to sort product reviews by their rating
 Author: Aveek Kr Saha, Arim Ghosh, Dualcube
-Version: 1.0.5
+Version: 1.0.6
 Author URI: http://dualcube.com
 */
 
@@ -22,6 +22,15 @@ if(!WC_Dependencies_Product_Review_Sorting::woocommerce_plugin_active_check()) {
 
 if ( version_compare( get_option( 'woocommerce_db_version' ), '2.1', '<' ) ) {
 	add_action( 'admin_notices', 'woocommerce_version_compatibility' );
+}
+
+add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'woo_product_review_sorting_settings' );
+function woo_product_review_sorting_settings( $links ) {
+	$plugin_links = array(
+			'<a href="' . admin_url( 'admin.php?page=wc-product-review-sorting-setting-admin' ) . '">' . __( 'Settings', WC_PRODUCT_REVIEW_SORTING_TEXT_DOMAIN ) . '</a>',
+			'<a href="http://dualcube.com/">' . __( 'Support', WC_PRODUCT_REVIEW_SORTING_TEXT_DOMAIN ) . '</a>'
+	);	
+	return array_merge( $plugin_links, $links );
 }
 
 if(!class_exists('WC_Product_Review_Sorting')) {

@@ -1,147 +1,137 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WooCommerce Product Review Sorting\n"
-"POT-Creation-Date: 2015-06-02 16:26+0530\n"
-"PO-Revision-Date: 2015-06-02 16:27+0530\n"
+"Project-Id-Version: Demo Plugin\n"
+"POT-Creation-Date: 2014-01-15 17:40+0530\n"
+"PO-Revision-Date: 2014-01-15 17:41+0530\n"
 "Last-Translator: Dualcube <admin@dualcube.com>\n"
 "Language-Team: Dualcube <admin@dualcube.com>\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.5.7\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
 "X-Poedit-Basepath: .\n"
-"X-Poedit-SearchPath-0: /woocommerce-product-review-"
-"sorting\n"
+"X-Poedit-SearchPath-0: C:\\wamp\\www\\3dcart\\wp-content\\plugins"
+"\\dc_demo_plugin\n"
 
-#: /woocommerce-product-review-sorting/templates/woocommerce-2.3/single-product-reviews.php:30
-#: /woocommerce-product-review-sorting/templates/woocommerce/single-product-reviews.php:30
-msgid "Reviews"
+#: C:\wamp\www\3dcart\wp-content\plugins\dc_demo_plugin/admin/class-dc-demo-plugin-settings-general.php:28
+msgid "Demo Default Settings"
 msgstr ""
 
-#: /woocommerce-product-review-sorting/templates/woocommerce-2.3/single-product-reviews.php:69
-#: /woocommerce-product-review-sorting/templates/woocommerce/single-product-reviews.php:69
-msgid "There are no reviews yet."
+#: C:\wamp\www\3dcart\wp-content\plugins\dc_demo_plugin/admin/class-dc-demo-plugin-settings-general.php:30
+msgid "ID Number"
+msgstr "Identification"
+
+#: C:\wamp\www\3dcart\wp-content\plugins\dc_demo_plugin/admin/class-dc-demo-plugin-settings-general.php:30
+msgid "Enter your ID Number here."
 msgstr ""
 
-#: /woocommerce-product-review-sorting/templates/woocommerce-2.3/single-product-reviews.php:82
-#: /woocommerce-product-review-sorting/templates/woocommerce/single-product-reviews.php:82
-msgid "Add a review"
+#: C:\wamp\www\3dcart\wp-content\plugins\dc_demo_plugin/admin/class-dc-demo-plugin-settings-general.php:30
+msgid "It will represent your identification."
 msgstr ""
 
-#: /woocommerce-product-review-sorting/templates/woocommerce-2.3/single-product-reviews.php:82
-#: /woocommerce-product-review-sorting/templates/woocommerce/single-product-reviews.php:82
-msgid "Be the first to review"
+#: C:\wamp\www\3dcart\wp-content\plugins\dc_demo_plugin/admin/class-dc-demo-plugin-settings-general.php:31
+msgid "About"
 msgstr ""
 
-#: /woocommerce-product-review-sorting/templates/woocommerce-2.3/single-product-reviews.php:83
-#: /woocommerce-product-review-sorting/templates/woocommerce/single-product-reviews.php:83
-#, php-format
-msgid "Leave a Reply to %s"
+#: C:\wamp\www\3dcart\wp-content\plugins\dc_demo_plugin/admin/class-dc-demo-plugin-settings-general.php:31
+msgid "About you"
 msgstr ""
 
-#: /woocommerce-product-review-sorting/templates/woocommerce-2.3/single-product-reviews.php:87
-#: /woocommerce-product-review-sorting/templates/woocommerce/single-product-reviews.php:87
-msgid "Name"
+#: C:\wamp\www\3dcart\wp-content\plugins\dc_demo_plugin/admin/class-dc-demo-plugin-settings-general.php:31
+msgid "It will represent your significant."
 msgstr ""
 
-#: /woocommerce-product-review-sorting/templates/woocommerce-2.3/single-product-reviews.php:89
-#: /woocommerce-product-review-sorting/templates/woocommerce/single-product-reviews.php:89
-msgid "Email"
+#: C:\wamp\www\3dcart\wp-content\plugins\dc_demo_plugin/admin/class-dc-demo-plugin-settings-general.php:32
+msgid "Enable"
 msgstr ""
 
-#: /woocommerce-product-review-sorting/templates/woocommerce-2.3/single-product-reviews.php:92
-#: /woocommerce-product-review-sorting/templates/woocommerce/single-product-reviews.php:92
-msgid "Submit"
+#: C:\wamp\www\3dcart\wp-content\plugins\dc_demo_plugin/admin/class-dc-demo-plugin-settings-general.php:33
+msgid "Off Day"
 msgstr ""
 
-#: /woocommerce-product-review-sorting/templates/woocommerce-2.3/single-product-reviews.php:98
-#: /woocommerce-product-review-sorting/templates/woocommerce/single-product-reviews.php:98
-msgid "Your Rating"
+#: C:\wamp\www\3dcart\wp-content\plugins\dc_demo_plugin/admin/class-dc-demo-plugin-settings-general.php:33
+msgid "Choose your preferred week offday."
 msgstr ""
 
-#: /woocommerce-product-review-sorting/templates/woocommerce-2.3/single-product-reviews.php:99
-#: /woocommerce-product-review-sorting/templates/woocommerce/single-product-reviews.php:99
-msgid "Rate&hellip;"
+#: C:\wamp\www\3dcart\wp-content\plugins\dc_demo_plugin/admin/class-dc-demo-plugin-settings-general.php:33
+msgid "By default Saterday will be offday."
 msgstr ""
 
-#: /woocommerce-product-review-sorting/templates/woocommerce-2.3/single-product-reviews.php:100
-#: /woocommerce-product-review-sorting/templates/woocommerce/single-product-reviews.php:100
-msgid "Perfect"
+#: C:\wamp\www\3dcart\wp-content\plugins\dc_demo_plugin/admin/class-dc-demo-plugin-settings-general.php:34
+msgid "Preference"
 msgstr ""
 
-#: /woocommerce-product-review-sorting/templates/woocommerce-2.3/single-product-reviews.php:101
-#: /woocommerce-product-review-sorting/templates/woocommerce/single-product-reviews.php:101
-msgid "Good"
+#: C:\wamp\www\3dcart\wp-content\plugins\dc_demo_plugin/admin/class-dc-demo-plugin-settings-general.php:34
+msgid "Choose your preferred occurence count."
 msgstr ""
 
-#: /woocommerce-product-review-sorting/templates/woocommerce-2.3/single-product-reviews.php:102
-#: /woocommerce-product-review-sorting/templates/woocommerce/single-product-reviews.php:102
-msgid "Average"
+#: C:\wamp\www\3dcart\wp-content\plugins\dc_demo_plugin/admin/class-dc-demo-plugin-settings-general.php:35
+msgid "Logo"
 msgstr ""
 
-#: /woocommerce-product-review-sorting/templates/woocommerce-2.3/single-product-reviews.php:103
-#: /woocommerce-product-review-sorting/templates/woocommerce/single-product-reviews.php:103
-msgid "Not that bad"
+#: C:\wamp\www\3dcart\wp-content\plugins\dc_demo_plugin/admin/class-dc-demo-plugin-settings-general.php:35
+msgid "Your presentation."
 msgstr ""
 
-#: /woocommerce-product-review-sorting/templates/woocommerce-2.3/single-product-reviews.php:104
-#: /woocommerce-product-review-sorting/templates/woocommerce/single-product-reviews.php:104
-msgid "Very Poor"
+#: C:\wamp\www\3dcart\wp-content\plugins\dc_demo_plugin/admin/class-dc-demo-plugin-settings-general.php:35
+msgid "Represent your graphical signature."
 msgstr ""
 
-#: /woocommerce-product-review-sorting/templates/woocommerce-2.3/single-product-reviews.php:108
-#: /woocommerce-product-review-sorting/templates/woocommerce/single-product-reviews.php:108
-msgid "Your Review"
+#: C:\wamp\www\3dcart\wp-content\plugins\dc_demo_plugin/admin/class-dc-demo-plugin-settings-general.php:36
+msgid "Choose Color"
 msgstr ""
 
-#: /woocommerce-product-review-sorting/templates/woocommerce-2.3/single-product-reviews.php:117
-#: /woocommerce-product-review-sorting/templates/woocommerce/single-product-reviews.php:117
-msgid ""
-"Only logged in customers who have purchased this product may leave a review."
+#: C:\wamp\www\3dcart\wp-content\plugins\dc_demo_plugin/admin/class-dc-demo-plugin-settings-general.php:36
+msgid "Choose your color here."
 msgstr ""
 
-#: /woocommerce-product-review-sorting/admin/class-wc-product-review-sorting-settings.php:27
-#: /woocommerce-product-review-sorting/admin/class-wc-product-review-sorting-settings.php:28
-msgid "Product Review Sorting Settings"
+#: C:\wamp\www\3dcart\wp-content\plugins\dc_demo_plugin/admin/class-dc-demo-plugin-settings-general.php:36
+msgid "This lets you choose your desired color."
 msgstr ""
 
-#: /woocommerce-product-review-sorting/admin/class-wc-product-review-sorting-settings.php:41
-msgid "Product Review Sorting General"
+#: C:\wamp\www\3dcart\wp-content\plugins\dc_demo_plugin/admin/class-dc-demo-plugin-settings-general.php:40
+msgid "Location"
 msgstr ""
 
-#: /woocommerce-product-review-sorting/admin/class-wc-product-review-sorting-settings-wc_product_review_sorting_general.php:29
-msgid "Enable Review Sorting Plugin"
+#: C:\wamp\www\3dcart\wp-content\plugins\dc_demo_plugin/admin/class-dc-demo-plugin-settings-general.php:41
+msgid "Role"
 msgstr ""
 
-#: /woocommerce-product-review-sorting/admin/class-wc-product-review-sorting-settings-wc_product_review_sorting_general.php:54
-msgid "Settings updated"
+#: C:\wamp\www\3dcart\wp-content\plugins\dc_demo_plugin/admin/class-dc-demo-plugin-settings-general.php:70
+msgid "Item ID should be an intiger."
 msgstr ""
 
-#: /woocommerce-product-review-sorting/classes/class-wc-product-review-sorting-admin.php:28
+#: C:\wamp\www\3dcart\wp-content\plugins\dc_demo_plugin/admin/class-dc-demo-plugin-settings-general.php:91
+msgid "Please upload your unique logo."
+msgstr ""
+
+#: C:\wamp\www\3dcart\wp-content\plugins\dc_demo_plugin/admin/class-dc-demo-plugin-settings-general.php:113
+msgid "General settings updated"
+msgstr ""
+
+#: C:\wamp\www\3dcart\wp-content\plugins\dc_demo_plugin/admin/class-dc-demo-plugin-settings-general.php:126
+msgid "Enter your default settings below"
+msgstr ""
+
+#: C:\wamp\www\3dcart\wp-content\plugins\dc_demo_plugin/admin/class-dc-demo-plugin-settings-general.php:134
+msgid "Enter your custom settings below"
+msgstr ""
+
+#: C:\wamp\www\3dcart\wp-content\plugins\dc_demo_plugin/admin/class-dc-demo-plugin-settings.php:27
+#: C:\wamp\www\3dcart\wp-content\plugins\dc_demo_plugin/admin/class-dc-demo-plugin-settings.php:28
+msgid "DC Demo Settings"
+msgstr ""
+
+#: C:\wamp\www\3dcart\wp-content\plugins\dc_demo_plugin/admin/class-dc-demo-plugin-settings.php:41
+msgid "General"
+msgstr ""
+
+#: C:\wamp\www\3dcart\wp-content\plugins\dc_demo_plugin/classes/class-dc-demo-plugin-admin.php:29
 msgid "Powered by"
 msgstr ""
 
-#: /woocommerce-product-review-sorting/classes/class-wc-product-review-sorting-admin.php:28
+#: C:\wamp\www\3dcart\wp-content\plugins\dc_demo_plugin/classes/class-dc-demo-plugin-admin.php:29
 msgid "Dualcube"
 msgstr ""
-
-#: /woocommerce-product-review-sorting/includes/wc-product-review-sorting-core-functions.php:17
-#, php-format
-msgid ""
-"%sWoocommerce Product Review Sorting is inactive.%s The %sWooCommerce plugin"
-"%s must be active for the Woocommerce Product Review Sorting to work. Please "
-"%sinstall & activate WooCommerce%s"
-msgstr ""
-
-#: /woocommerce-product-review-sorting/includes/wc-product-review-sorting-core-functions.php:27
-#, php-format
-msgid ""
-"%sWoocommerce Product Review Sorting is inactive.%s The %sWooCommerce plugin"
-"%s version must be greater than 2.1 for the Woocommerce Product Review "
-"Sorting to work. Please %sinstall & activate WooCommerce%s"
-msgstr ""
-
-#~ msgid "ID Number"
-#~ msgstr "Identification"

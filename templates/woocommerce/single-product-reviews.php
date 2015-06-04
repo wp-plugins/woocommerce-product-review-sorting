@@ -7,6 +7,22 @@
  * @version     2.3.2
  */
 global $product;
+global $WC_Product_Review_Sorting;
+
+$plugin_settings = array();
+$plugin_settings = get_option('dc_wc_product_review_sorting_general_settings_name');
+
+if( !empty($plugin_settings) && isset($plugin_settings) ) {
+	$star_5 = $star_4 = $star_3 = $star_2 = $star_1 = $new = $old = '';
+	
+	$star_5 = $plugin_settings['rating_5'] ? $plugin_settings['rating_5'] : '5 Stars';
+	$star_4 = $plugin_settings['rating_4'] ? $plugin_settings['rating_4'] : '4 Stars';
+	$star_3 = $plugin_settings['rating_3'] ? $plugin_settings['rating_3'] : '3 Stars';
+	$star_2 = $plugin_settings['rating_2'] ? $plugin_settings['rating_2'] : '2 Stars';
+	$star_1 = $plugin_settings['rating_1'] ? $plugin_settings['rating_1'] : '1 Stars';
+	$new = $plugin_settings['newest'] ? $plugin_settings['newest'] : 'Newest';
+	$old = $plugin_settings['oldest'] ? $plugin_settings['oldest'] : 'Oldest';
+}
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
@@ -24,21 +40,30 @@ if ( ! comments_open() ) {
 		
 		<div class="product_reviews">
 			<h2 class="no_of_review"><span><?php
-				if ( get_option( 'woocommerce_enable_review_rating' ) === 'yes' && ( $count = $product->get_rating_count() ) )
+				if ( get_option( 'woocommerce_enable_review_rating' ) === 'yes' && ( $count = $product->get_review_count() ) )
 					printf( _n( '%s review for %s', '%s reviews for %s', $count, 'woocommerce' ), $count, get_the_title() );
 				else
 					_e( 'Reviews', 'woocommerce' );
 			?></span></h2>
-			<div class="rating_sort">
-				<?php if( $product->get_rating_count() ) : ?>
-					<select class="rating_sorting">
-						<option id="default" selected="selected"><?php echo apply_filters( 'sort_rating_label', 'Sort by rating'); ?></option>
-						<option value="5"><?php echo apply_filters( 'woo_rating_star_5', '5 Stars'); ?></option>
-						<option value="4"><?php echo apply_filters( 'woo_rating_star_4', '4 Stars'); ?></option>
-						<option value="3"><?php echo apply_filters( 'woo_rating_star_3', '3 Stars'); ?></option>
-						<option value="2"><?php echo apply_filters( 'woo_rating_star_2', '2 Stars'); ?></option>
-						<option value="1"><?php echo apply_filters( 'woo_rating_star_1', '1 Star'); ?></option>
-					</select>
+			<div class="review_sort">
+				<?php if( $product->get_review_count() ) : ?>
+					<div class="rating_sorting_container">
+						<select class="rating_sorting">
+							<option id="default" selected="selected" value="default"><?php echo __( 'Sort by Rating', $WC_Product_Review_Sorting->text_domain ); ?></option>
+							<option value="5"><?php echo __( $star_5, $WC_Product_Review_Sorting->text_domain ); ?></option>
+							<option value="4"><?php echo __( $star_4, $WC_Product_Review_Sorting->text_domain ); ?></option>
+							<option value="3"><?php echo __( $star_3, $WC_Product_Review_Sorting->text_domain ); ?></option>
+							<option value="2"><?php echo __( $star_2, $WC_Product_Review_Sorting->text_domain ); ?></option>
+							<option value="1"><?php echo __( $star_1, $WC_Product_Review_Sorting->text_domain ); ?></option>
+						</select>
+					</div>
+					<div class="time_sorting_container">
+						<select class="time_sorting">
+							<option id="default" selected="selected" value="default"><?php echo "Sort by Date" ?></option>
+							<option value="new"><?php echo __( $new, $WC_Product_Review_Sorting->text_domain ); ?></option>
+							<option value="old"><?php echo __( $old, $WC_Product_Review_Sorting->text_domain ); ?></option>
+						</select>
+					</div>
 				<?php endif ?>
 			</div>
 		</div>
